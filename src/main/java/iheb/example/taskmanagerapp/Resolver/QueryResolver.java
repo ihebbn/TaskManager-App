@@ -3,9 +3,10 @@ package iheb.example.taskmanagerapp.Resolver;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import iheb.example.taskmanagerapp.Entity.Task;
 import iheb.example.taskmanagerapp.Service.TaskService;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+@Component
 public class QueryResolver implements GraphQLQueryResolver {
     private final TaskService taskService;
 
@@ -14,6 +15,6 @@ public class QueryResolver implements GraphQLQueryResolver {
     }
 
     public List<Task> retrieveAllTasks() {
-        return taskService.retrieveAllTasks();
+        return taskService.retrieveAlltasks();
     }
 }
